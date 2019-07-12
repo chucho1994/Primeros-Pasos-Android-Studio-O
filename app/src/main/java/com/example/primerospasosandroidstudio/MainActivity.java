@@ -7,8 +7,8 @@
 //y un tercero text view que nos muestre el resultado
 /*Es la continuacion del proyecto2 por que ese proyecto me ise bolas con los comits
 y no pude restablecerlo otra ves los borre con git reset --soft y borre dos estan en la nube todavia
-pero no se como regresarlos de nuevo al git por ahora
- */
+pero no se como regresarlos de nuevo por ahora z
+ */   //  hghhyhyhyhy
 
 
 package com.example.primerospasosandroidstudio;

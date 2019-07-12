@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Primeros Pasos Android Studio</string>
+
+    <string name="primer_valor">Ingresa primer valor</string>
+    <string name="segundo_valor">Ingresa segundo valor</string>
+    <string name="boton_resultado">Sumar</string>
+    <string name="resultado_text">Resultado</string>
+
+</resources>

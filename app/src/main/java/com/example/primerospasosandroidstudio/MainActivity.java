@@ -138,6 +138,9 @@ public class MainActivity extends AppCompatActivity {
        //con el teclado o raton a nuestro gusto
 
 
+       //hola estamos checando la rama pruebas_calculadora que esta dentro de la ramma
+       //principal master la vamos a subir al git hub
+
    }
 
     }

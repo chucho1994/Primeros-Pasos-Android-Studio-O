@@ -1,15 +1,10 @@
 
 
-//Ejemplo hacer una calculadora que nadamas sume
-// Mediante un edit text number que reciba el primer valor :
-//y otro  edit text number que reciba el segundo valor
-//un botton que diga sumar para hacer el enlace de los dos valores
-//y un tercero text view que nos muestre el resultado
-/*Es la continuacion del proyecto2 por que ese proyecto me ise bolas con los comits
-y no pude restablecerlo otra ves los borre con git reset --soft y borre dos estan en la nube todavia
-pero no se como regresarlos de nuevo por ahora z
- */   //  hghhyhyhyhy
-
+/*Hacer una app que contenga un texView donde nos muestre
+la evaluacion de las calificaciones de fisica, matematicas, español y nos diga
+si el alumno aprobo o rebrobo mediante el texView que lo va a mandar a llamar el
+boton evaluar
+ */
 
 package com.example.primerospasosandroidstudio;
 
@@ -31,10 +26,12 @@ import android.widget.Toast;//libreria para utilizar clase toast-
 public class MainActivity extends AppCompatActivity {
 
     //Lo primero que se hace es agregar objetos de tipo EditText en modo privado
-    //para que nadamas esta clase tenga acceso a ellos
+    //para que nadamas esta clase tenga acceso a ellos y van a hacer  4   tres para que el alumno
+    //ingrese la calificacion de matematicas, fisica y español y uno para promedio
 
     private EditText et1;
     private EditText et2;
+    private EditText et3;
     private TextView tv1;
 
     @Override
@@ -53,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 y asi se compatible     */
 
 
-        int matematicas = 5;
-        int física= 5;
-        int español=5;
+        int matematicas = 0;
+        int física= 0;
+        int español=0;
         int promedio = 0;
 
 
@@ -103,26 +100,30 @@ public class MainActivity extends AppCompatActivity {
 
         et1 = (EditText) findViewById(R.id.txt_num1);
        et2 = (EditText) findViewById(R.id.txt_num2);
+       et3=(EditText)findViewById(R.id.txt_num3);
+
      tv1 = (TextView) findViewById(R.id.txt_Resultado);
 
 
     }
-    //El metodo se va a mandar a llamar cuando demos click en el main activity de sumar
+    //El metodo se va a mandar a llamar cuando demos click en el main activity de Evaluar
     // el metodo se agrega en   common attributes y luego en onclick y seleccionar metodo
-    //El siguiente metodo realiza la suma
+    //El siguiente metodo realiza la Evaluacion
     //           \/Retornara valores nuestro metodo
-   public void Suma(View view) {
+   public void Evaluar(View view) {
 
        //       \/variable de tipo stiring que guardara
        //                  \/Metodo que nos permite recuperar todoo el edit text
        String valor1 = et1.getText().toString();
        String valor2 = et2.getText().toString();
+       String valor3 = et3.getText().toString();
        //                             /\metodo que nos permite parsear a string
        //                           \/Parseo de String a entero(int)
        int numero1 = Integer.parseInt(valor1);
        int numero2 = Integer.parseInt(valor2);
+       int numero3 = Integer.parseInt(valor3);
 
-       int suma = numero1 + numero2;
+       int promedio= (numero1 + numero2+numero3)/3;
 
         /*                      \/Parsear de entero a String forma novata
         String resultado1=suma+" ";
@@ -130,8 +131,19 @@ public class MainActivity extends AppCompatActivity {
         */
        //Parsear de entero a string de manera pro
 
-       String resultado1 = String.valueOf(suma);
-       tv1.setText(resultado1);
+     //  String resultado1 = String.valueOf(promedio);
+       //tv1.setText(resultado1);
+
+       String mensaje="Alumno aprobado con: ";
+       String mensaje2="Alumno Rebrobado con ";
+
+       if(promedio>=6){
+           tv1.setText(mensaje+promedio);
+       }if(promedio<=5){
+           tv1.setText(mensaje2+promedio);
+       }
+
+
 
        //para hacer texto grade y chico de editor de texto nos vamos a settings /keymap y en buscar
        //le damos en font size y seleccionamos para hacer grande o chico y lo configuramos

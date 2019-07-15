@@ -6,10 +6,15 @@
 
    /<!-- string name="Aprobo_reprobo">Sumar</string -->
 
-    <string name="matematicas">Matematicas</string>
-    <string name="fisica">Fisica</string>
-    <string name="español">Español</string>
+    <string name="ingresa_valor1">Ingresa valor 1</string>
+    <string name="ingresa_valor2">Ingresa valor 2</string>
 
-    <string name="Evaluar">Evaluar</string>
+    <string name="vamos_sumar">Sumar</string>
+    <string name="vamos_restar">restar</string>
+
+    <string name="hacer_accion">Hacer accion</string>
+    <string name="Resultado_total">Resultado</string>
+
+
 
 </resources>
